@@ -11,12 +11,7 @@ if __name__ == '__main__':
     original = np.array([[100, 150, 150, 50, 50],
                          [200, 150, 50, 50, 150]])
 
-    textos = np.array([[100, 160, 160, 40, 40],
-                       [210, 150, 50, 50, 150]])
-
-    labels = ['A', 'B', 'C', 'D', 'E', 'F']
-
-    poligono = ui.Poligono(canvas, 800, original, textos)
+    poligono = ui.Poligono(canvas, 800, original)
     poligono.desenhar()
 
     canvas.pack()
