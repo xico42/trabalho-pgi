@@ -17,3 +17,11 @@ def escala(matriz_original, ex, ey):
     matriz_escala = np.array([[ex, 0],
                               [0, ey]])
     return matriz_escala.dot(matriz_original)
+
+
+def rotacao(matriz_original, teta):
+    teta = np.deg2rad(teta)
+    matriz_rotacao = np.array([[np.cos(teta), -np.sin(teta)],
+                               [np.sin(teta), np.cos(teta)]])
+
+    return matriz_rotacao.dot(matriz_original)
