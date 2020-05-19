@@ -36,17 +36,17 @@ class Poligono:
             self.id_labels.append(id_label)
             self.id_labels.append(id_box)
 
-    def transladar(self, tx, ty):
+    def translacao(self, tx, ty):
         self.matriz_objeto = op.translacao(self.matriz_objeto, tx, ty)
         self._resetar()
         self.desenhar()
 
-    def escalar(self, ex, ey, ptx=0, pty=0):
+    def escala(self, ex, ey, ptx=0, pty=0):
         self.matriz_objeto = op.escala(self.matriz_objeto, ex, ey, ptx, pty)
         self._resetar()
         self.desenhar()
 
-    def rotacionar(self, teta, ptx=0, pty=0):
+    def rotacao(self, teta, ptx=0, pty=0):
         self.matriz_objeto = op.rotacao(self.matriz_objeto, teta, ptx, pty)
         self._resetar()
         self.desenhar()
