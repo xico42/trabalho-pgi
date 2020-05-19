@@ -11,3 +11,9 @@ def translacao(matriz_original, tx, ty):
     linha_y = matriz_original[1]
 
     return np.array([linha_x + tx, linha_y + ty])
+
+
+def escala(matriz_original, ex, ey):
+    matriz_escala = np.array([[ex, 0],
+                              [0, ey]])
+    return matriz_escala.dot(matriz_original)
