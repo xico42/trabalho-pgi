@@ -21,9 +21,10 @@ def escala(matriz_original, ex, ey, ptx=0, pty=0):
     return translacao(matriz_original, ptx, pty)
 
 
-def rotacao(matriz_original, teta):
+def rotacao(matriz_original, teta, ptx=0, pty=0):
     teta = np.deg2rad(teta)
+    matriz_original = translacao(matriz_original, -ptx, -pty)
     matriz_rotacao = np.array([[np.cos(teta), -np.sin(teta)],
                                [np.sin(teta), np.cos(teta)]])
-
-    return matriz_rotacao.dot(matriz_original)
+    matriz_original = matriz_rotacao.dot(matriz_original)
+    return translacao(matriz_original, ptx, pty)

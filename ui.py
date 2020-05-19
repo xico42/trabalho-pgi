@@ -46,8 +46,8 @@ class Poligono:
         self._resetar()
         self.desenhar()
 
-    def rotacionar(self, teta):
-        self.matriz_objeto = op.rotacao(self.matriz_objeto, teta)
+    def rotacionar(self, teta, ptx=0, pty=0):
+        self.matriz_objeto = op.rotacao(self.matriz_objeto, teta, ptx, pty)
         self._resetar()
         self.desenhar()
 

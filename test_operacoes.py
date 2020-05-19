@@ -49,6 +49,17 @@ class OperacoesTestCase(unittest.TestCase):
 
         assert_array_equal(matrix_esperada, rotacionada)
 
+    def test_exercicio_5(self):
+        original = np.array([[10, 15, 15, 5, 5],
+                             [20, 15, 5, 5, 15]])
+
+        matrix_esperada = np.array([[-10, -5, 5, 5, -5],
+                                    [10, 15, 15, 5, 5]])
+
+        rotacionada = rotacao(original, 90, 5, 5)
+
+        assert_array_almost_equal(matrix_esperada, rotacionada, decimal=5)
+
 
 if __name__ == '__main__':
     unittest.main()
