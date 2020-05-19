@@ -41,8 +41,8 @@ class Poligono:
         self._resetar()
         self.desenhar()
 
-    def escalar(self, ex, ey):
-        self.matriz_objeto = op.escala(self.matriz_objeto, ex, ey)
+    def escalar(self, ex, ey, ptx=0, pty=0):
+        self.matriz_objeto = op.escala(self.matriz_objeto, ex, ey, ptx, pty)
         self._resetar()
         self.desenhar()
 

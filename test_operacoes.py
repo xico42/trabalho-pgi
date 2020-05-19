@@ -38,6 +38,17 @@ class OperacoesTestCase(unittest.TestCase):
 
         assert_array_almost_equal(matrix_esperada, rotacionada, decimal=5)
 
+    def test_exercicio_4(self):
+        original = np.array([[10, 15, 15, 5, 5],
+                             [20, 15, 5, 5, 15]])
+
+        matrix_esperada = np.array([[15, 25, 25, 5, 5],
+                                    [35, 25, 5, 5, 25]])
+
+        rotacionada = escala(original, 2, 2, 5, 5)
+
+        assert_array_equal(matrix_esperada, rotacionada)
+
 
 if __name__ == '__main__':
     unittest.main()

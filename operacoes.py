@@ -13,10 +13,12 @@ def translacao(matriz_original, tx, ty):
     return np.array([linha_x + tx, linha_y + ty])
 
 
-def escala(matriz_original, ex, ey):
+def escala(matriz_original, ex, ey, ptx=0, pty=0):
+    matriz_original = translacao(matriz_original, -ptx, -pty)
     matriz_escala = np.array([[ex, 0],
                               [0, ey]])
-    return matriz_escala.dot(matriz_original)
+    matriz_original = matriz_escala.dot(matriz_original)
+    return translacao(matriz_original, ptx, pty)
 
 
 def rotacao(matriz_original, teta):
